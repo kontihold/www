@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<title>WEB</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<style type="text/css">
+			.drophover:hover > .dropdown-menu{
+			display: block;
+			margin: 0;
+			}
+			.carousel-item{
+			height: 300px;
+			width: 200px;
+			}
+			.carousel-item img{
+			margin: auto;
+			max-height: 100%;
+			max-width: 100%;
+			}
+			.backFill{
+			background: #89A3DD;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+				<a class="navbar-brand" href="#">BOOTSTRAP</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+									<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item active">
+							<a class="nav-link" href="задание3.html">main<span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item dropdown drophover">
+							<a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">task</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="математика.html">math</a>
+								<a class="dropdown-item" href="котик.html">cat</a>
+								<div class="dropdown-divider"></div>
+								<div class="btn-group dropright drophover">
+									<a class="dropdown-toggle dropdown-item" style="cursor: pointer;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										dropdown-toggle
+									</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">yep!</a>
+
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="#" data-toggle="modal" data-target="#myModal">interesting fact</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="modal fade" id="myModal">
+				<div class="modal-dialog" role="document">
+					<div class="card border-success">
+						<div class="card-header bg-info text-white">
+							wow
+						</div>
+						<div class="card-body">
+							<p>the weather is good today!</p>
+							<hr>
+							<button type="button" class="btn btn-info" data-dismiss="modal">nice</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-4 col-xl-3">
+						<div id="accordion">
+							<br>
+							<div class="card">
+								<div class="card-header" id="headingOne">
+									<h5 class="mb-0">
+									<button class="btn btn-link" data-toggle="collapse" data-target="#SiteMap" aria-expanded="true" aria-controls="SiteMap">
+									site map
+									</button>
+									</h5>
+								</div>
+								<div id="SiteMap" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+									<div class="card-body">
+										<a href="задание3.html">main</a>
+										<ul>
+											<li>
+												<a href="#">task</a>
+												<ul>
+													<li> <a href="котик.html">cat</a></li>
+													<li><a href="математика.html">math</a></li>
+												</ul>
+										</li>
+
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="headingTwo">
+									<h5 class="mb-0">
+									<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Contacts" aria-expanded="false" aria-controls="Contacts">
+
+	              business card
+									</button>
+									</h5>
+								</div>
+								<div id="Contacts" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+										<div class="card-body">
+											<ul>
+												<li><a href="https://vk.com/innokenty_chair">vk</a></li>
+												<li><a href="mailto:konti.hold@gmail.com">gmail</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header" id="headingThree">
+										<h5 class="mb-0">
+										<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+										send message
+										</button>
+										</h5>
+									</div>
+									<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+										<div class="card-body">
+											<form target="_self" method="GET">
+												<div class="form-group">
+													<input name="name" class="form-control form-control-lg" type="text" placeholder="ur name">
+												</div>
+												<div class="form-group">
+													<label for="emailFormInput1">ur mail</label>
+													<input name="email" type="email" class="form-control" id="emailFormInput1" placeholder="name@example.com">
+												</div>
+												<div class="form-group">
+													<label for="textFormInput1">message</label>
+													<textarea name="text" class="form-control" id="textFormInput1" rows="3"></textarea>
+												</div>
+												<div class="form-group">
+													<input name="submit" type="submit" class="form-control" id="emailFormInput1" value="sent">
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-8 col-xl-9">
+						<br>
+							<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+							<ol class="carousel-indicators">
+								<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+								<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+								<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+								<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+								<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+								<li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+								<li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+							</ol>
+							<div class="carousel-inner backFill rounded">
+											<div class="carousel-item active">
+														<img class="d-block" src="true.jpg" alt="First slide">
+																</div>
+																<div class="carousel-item">
+																	<img class="d-block" src="wow.jpg" alt="First slide"width="1000px">
+																</div>
+																<div class="carousel-item">
+																	<img class="d-block" src="gun.jpg" alt="First slide"width="1000px">
+																</div>
+																<div class="carousel-item">
+																	<img class="d-block" src="true.jpg" alt="First slide"width="1000px">
+																</div>
+																<div class="carousel-item">
+																	<img class="d-block" src="wow.jpg" alt="Second slide"width="1000px">
+																</div>
+																<div class="carousel-item">
+																	<img class="d-block" src="gun.jpg" alt="Third slide"width="1000px">
+																</div>
+																<div class="carousel-item">
+																	<img class="d-block" src="house.jpg" alt="Third slide" width="1000px">
+																</div>
+															</div>
+															<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+																<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+																<span class="sr-only">Previous</span>
+															</a>
+															<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+																<span class="carousel-control-next-icon" aria-hidden="true"></span>
+																<span class="sr-only">Next</span>
+															</a>
+														</div>
+													</div>
+														<br>
+														<nav>
+
+							<div class="nav nav-tabs" id="nav-tab" role="tablist">
+								<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">1</a>
+								<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">2</a>
+								<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">3</a>
+							</div>
+						</nav>
+						<div class="tab-content" id="nav-tabContent">
+							<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+								<br>
+								<div class="media">
+									<img class="align-self-top mr-3" width="64px" src="hulda.jpg" alt="Generic placeholder image">
+									<div class="media-body">
+										<h5 class="mt-0 text-info">new</h5>
+										<p>
+											Hilda is a British-Canadian animated television series based on the graphic novel series of the same name by Luke Pearson. Produced by Silvergate Media and Mercury Filmworks, the show follows the adventures of fearless Hilda, a blue-haired girl who, along with her deerfox Twig, travels to the city of Trolberg, where she befriends even the most dangerous monsters.
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+								<br>
+								<div class="media">
+									<img class="align-self-top mr-3" width="64px" src="over.jpg" alt="Generic placeholder image">
+									<div class="media-body">
+										<h5 class="mt-0 text-info">favourite</h5>
+										<p>
+											Over the Garden Wall is an American animated television miniseries created by Patrick McHale for Cartoon Network. The series centers on two half-brothers who travel across a strange forest in order to find their way home, encountering odd and wonderful things on their journey. The show is based on McHale's animated short film Tome of the Unknown, which was produced as part of Cartoon Network Studios' shorts development program. The show features Elijah Wood and Collin Dean as the protagonists Wirt and Greg, and Melanie Lynskey as a bluebird named Beatrice. Over the Garden Wall was broadcast throughout the week of November 3, 2014 to November 7, 2014.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+								<br>
+								<div class="media">
+									<img class="align-self-top mr-3" width="64px" src="time.jpg" alt="Generic placeholder image">
+									<div class="media-body">
+										<h5 class="mt-0 text-info">old</h5>
+										<p>
+											Adventure Time[m] is an American animated television series created by Pendleton Ward for Cartoon Network. Produced by Frederator Studios and Cartoon Network Studios, the series follows the adventures of a boy named Finn (voiced by Jeremy Shada) and his best friend and adoptive brother Jake (John DiMaggio)—a dog with the magical power to change shape and size at will. Finn and Jake live in the post-apocalyptic Land of Ooo, where they interact with Princess Bubblegum (Hynden Walch), the Ice King (Tom Kenny), Marceline the Vampire Queen (Olivia Olson), BMO (Niki Yang), and others. The series is based on a 2007 short produced for Nicktoons and Frederator Studios' animation incubator series Random! Cartoons. After the short became a viral hit on the Internet, Cartoon Network commissioned a full-length series, which previewed on March 11, 2010, and officially premiered on April 5, 2010.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</body>
+</html>

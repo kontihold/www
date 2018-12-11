@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<title></title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			$(function () {$('[data-toggle="tooltip"]').tooltip()})
+		</script>
+		<style type="text/css">
+			.drophover:hover > .dropdown-menu{
+			display: block;
+			margin: 0;
+			}
+		</style>
+	</head>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<a class="navbar-brand" href="#">BOOTSTRAP</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="задание3.html">main<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item dropdown drophover">
+						<a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">task</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="математика.html">math</a>
+							<a class="dropdown-item" href="котик.html">cat</a>
+							<div class="dropdown-divider"></div>
+							<div class="btn-group dropright drophover">
+								<a class="dropdown-toggle dropdown-item" style="cursor: pointer;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									dropdown-toggle
+								</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#">yep!</a>
+
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#" data-toggle="modal" data-target="#myModal">interesting fact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="modal fade" id="myModal">
+			<div class="modal-dialog" role="document">
+				<div class="card border-success">
+					<div class="card-header bg-info text-white">
+						wow
+					</div>
+					<div class="card-body">
+						<p>the weather is good today!</p>
+						<hr>
+						<button type="button" class="btn btn-info" data-dismiss="modal">nice</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-4 col-xl-3">
+					<div id="accordion">
+						<br>
+						<div class="card">
+							<div class="card-header" id="headingOne">
+								<h5 class="mb-0">
+								<button class="btn btn-link" data-toggle="collapse" data-target="#SiteMap" aria-expanded="true" aria-controls="SiteMap">
+								site map
+								</button>
+								</h5>
+							</div>
+							<div id="SiteMap" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+								<div class="card-body">
+									<a href="задание3.html">main</a>
+									<ul>
+										<li>
+											<a href="#">task</a>
+											<ul>
+												<li> <a href="котик.html">cat</a></li>
+												<li><a href="математика.html">math</a></li>
+											</ul>
+										</li>
+										<li><a href="макет2.html">content</a></li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" id="headingTwo">
+								<h5 class="mb-0">
+								<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Contacts" aria-expanded="false" aria-controls="Contacts">
+
+							business card
+								</button>
+								</h5>
+							</div>
+							<div id="Contacts" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+									<div class="card-body">
+										<ul>
+											<li><a href="https://vk.com/innokenty_chair">vk</a></li>
+											<li><a href="mailto:konti.hold@gmail.com">gmail</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="headingThree">
+									<h5 class="mb-0">
+									<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+									send message
+									</button>
+									</h5>
+								</div>
+								<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+									<div class="card-body">
+										<form target="_self" method="GET">
+											<div class="form-group">
+												<input name="name" class="form-control form-control-lg" type="text" placeholder="ur name">
+											</div>
+											<div class="form-group">
+												<label for="emailFormInput1">ur mail</label>
+												<input name="email" type="email" class="form-control" id="emailFormInput1" placeholder="name@example.com">
+											</div>
+											<div class="form-group">
+												<label for="textFormInput1">message</label>
+												<textarea name="text" class="form-control" id="textFormInput1" rows="3"></textarea>
+											</div>
+											<div class="form-group">
+												<input name="submit" type="submit" class="form-control" id="emailFormInput1" value="sent">
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-8 col-xl-9">
+						<br>
+						<nav>
+						<svg data-toggle="tooltip" data-placement="top" title="i love my mouse"
+							width="198" height="188"
+							viewBox="0 0 198 188"
+							version="1.1"
+							baseProfile="full"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							xmlns:ev="http://www.w3.org/2001/xml-events">
+							<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="even-odd">
+
+								<polygon stroke="#151515" stroke-width="3" fill="#36378b"
+								points="20 20 30 90 90 30 "></polygon>
+								<polygon stroke="#151515" stroke-width="3" fill="#36378b"
+								points="190 20 170 90 90 30 "></polygon>
+								<circle cx="100px" cy="100px" r="80px" stroke="#151515" stroke-width="3" fill="#36378b" />
+								<polygon stroke="#151515" stroke-width="2" fill="#000000"
+								points="100 125 90 110 110 110 "></polygon>
+								<circle cx="130px" cy="80px" r="15px" stroke="#151515" stroke-width="2" fill="#fff" />
+								<circle cx="70px" cy="80px" r="15px" stroke="#151515" stroke-width="2" fill="#fff" />
+								<circle cx="130px" cy="80px" r="10px" stroke="#151515" stroke-width="2" fill="#000" />
+								<circle cx="70px" cy="80px" r="10px" stroke="#151515" stroke-width="2" fill="#000" />
+
+								<polygon stroke="#000000" stroke-width="3" fill="#000000"
+								points="100 120 100 140"></polygon>
+								<polygon stroke="#000000" stroke-width="3" fill="#000000"
+								points="80 140 120 140"></polygon>
+
+							</g>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
