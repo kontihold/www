@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>  <meta charset="utf-8"></head>
+<body>
+    <script>
+		var m = [ 
+			{ 
+		text: 'animals',
+		children: [
+		{
+		text: 'mammals',
+		children: [
+		{ text: 'cow' },
+		{ text: 'whale' },
+		{ text: 'dear' },
+		{ text: 'cat' },
+		]
+		},
+		{
+		text: 'reptiles',
+		children: [
+		{ text: 'snakes' },
+		{ text: 'lizard' },
+		{ text: 'terlol' },
+		]
+		},
+		]
+		},
+		{
+		text: 'fish',
+		children: [
+		{
+		text: 'aquarium',
+		children: [
+		{ text: 'gupii' },
+		{ text: 'golden fish' },
+		]
+		},
+		{
+		text: 'sea',
+		children: [
+		{ text: 'shark' },
+		{ text: 'swordfish' },
+		]
+		},
+		]
+		},
+		];
+		var ul =  document.createElement('ul');
+		function element(child, ul1){
+			var li = document.createElement('li');
+			var node = document.createTextNode(child['text']); 
+			li.appendChild(node);
+			ul1.appendChild(li);
+			if (child.hasOwnProperty('childs')){
+				var ul2 = document.createElement('ul');
+				for (i in child['childs']){
+					element(child['childs'][i], ul2);
+				}
+				li.appendChild(ul2);
+			}
+		}
+		for (i in m){
+			element(m[i], ul);
+		}
+		
+		document.body.appendChild(ul);
+		domElement(document.documentElement);
+		function domElement(dom){
+			console.log(dom.tagName);
+			for (var element in dom.childNodes){
+				var name = dom.childNodes[element];
+				if (name instanceof HTMLElement){
+					domElement(name);
+				}
+			}
+		}
+  </script>
+</body>
+</html>

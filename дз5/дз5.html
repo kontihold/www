@@ -1,0 +1,87 @@
+<html> 
+	<head> 
+		<meta charset="utf-8"> 
+		<script src="http://code.jquery.com/jquery-1.8.3.js"></script> 
+			<style type="text/css"> 
+			#list { 
+			} 
+			ul > li { 
+			} 
+			ul > li > ul { 
+			display: none; 
+		} 
+		</style> 
+	</head> 
+<body> 
+	<script> 
+		var m = [ 
+			{ 
+		text: 'animals',
+		children: [
+		{
+		text: 'mammals',
+		children: [
+		{ text: 'cow' },
+		{ text: 'whale' },
+		{ text: 'dear' },
+		{ text: 'cat' },
+		]
+		},
+		{
+		text: 'reptiles',
+		children: [
+		{ text: 'snakes' },
+		{ text: 'lizard' },
+		{ text: 'terlol' },
+		]
+		},
+		]
+		},
+		{
+		text: 'fish',
+		children: [
+		{
+		text: 'aquarium',
+		children: [
+		{ text: 'gupii' },
+		{ text: 'golden fish' },
+		]
+		},
+		{
+		text: 'sea',
+		children: [
+		{ text: 'shark' },
+		{ text: 'swordfish' },
+		]
+		},
+		]
+		},
+		];
+
+
+        function element(childs) {         
+            var ul = $('<ul/>')
+            for (var child of childs) {
+                var li = $('<li/>')
+                if (child.text != undefined){ 
+                    li.append(child.text)
+                }
+                if (typeof child != 'object'){
+                    li.append(child)
+                }
+                else if (child.childs != undefined){
+                    li.append(element(child.childs))
+                }       
+                li.on('click', function () {                 
+                    $(this.firstElementChild).slideToggle();
+                    console.log(this.firstChild.data, $(this).find("li").length);
+                    return false
+                })
+                ul.append(li)
+            }
+            return ul
+        }
+        $("body").append(element(m));
+		</script>       
+	</body>
+</html>
